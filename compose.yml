@@ -1,0 +1,19 @@
+name: xc_chatbot
+
+services:
+  my_service_1:
+    image: my_service_1
+    container_name: my_service_1_api
+    build:
+      context: ./my_service_1
+      dockerfile: Dockerfile.dev
+    restart: always # Any Issue when RUnning Contianer = ShutDown
+    volumes:
+      - ./my_service_1:/code # Sync local development directory with the container
+    ports:
+      - "8003:8003" # Expose container port 8502 to host port 8502
+    tty: true
+
+networks:
+  default:
+    driver: bridge

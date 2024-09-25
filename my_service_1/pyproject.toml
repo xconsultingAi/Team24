@@ -1,12 +1,16 @@
 [tool.poetry]
-name = "xc-chatbot"
+name = "xc_chatbot"
 version = "0.1.0"
 description = ""
-authors = ["waqas <waqas.ahsan@fantechlabs.io>"]
+authors = ["waqas"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+requests = "^2.32.3"
+fastapi = "^0.115.0"
+pydantic = "^2.9.2"
+uvicorn = "^0.30.6"
 
 
 [build-system]
